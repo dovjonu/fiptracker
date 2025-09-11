@@ -125,17 +125,15 @@ class OverviewTab extends StatelessWidget {
                       })
                       .whereType<DateTime>()
                       .toList();
-                  if (times.length >= 2) {
-                    List<int> diffs = [];
-                    for (int i = 0; i < times.length - 1; i++) {
-                      diffs.add(times[i].difference(times[i + 1]).inMinutes.abs());
-                    }
-                    if (diffs.isNotEmpty) {
-                      final avg = diffs.reduce((a, b) => a + b) / diffs.length;
-                      final h = (avg ~/ 60) - 24;
-                      final m = avg % 60;
-                      avgText = "${h}h ${m}m";
-                    }
+                  if (times.isNotEmpty) {
+                    // Calculate average clock time (in minutes since midnight)
+                    final avgMinutes = times
+                        .map((dt) => dt.hour * 60 + dt.minute)
+                        .reduce((a, b) => a + b) /
+                        times.length;
+                    final avgHour = avgMinutes ~/ 60;
+                    final avgMinute = avgMinutes.round() % 60;
+                    avgText = "${avgHour.toString().padLeft(2, '0')}:${avgMinute.toString().padLeft(2, '0')}";
                   }
                 }
                 return Row(
