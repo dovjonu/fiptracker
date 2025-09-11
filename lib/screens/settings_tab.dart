@@ -49,7 +49,7 @@ class _SettingsTabState extends State<SettingsTab> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Settings")),
+      appBar: AppBar(title: const Text("Nustatymai")),
       body: _loading
           ? const Center(child: CircularProgressIndicator())
           : Padding(
@@ -62,7 +62,7 @@ class _SettingsTabState extends State<SettingsTab> {
                       Text(_error!, style: const TextStyle(color: Colors.red)),
                       const SizedBox(height: 16),
                     ],
-                    const Text("Locations", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                    const Text("Vietos", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                     ...locations.map((loc) => Row(
                           children: [
                             Expanded(child: Text(loc)),
@@ -80,7 +80,7 @@ class _SettingsTabState extends State<SettingsTab> {
                         Expanded(
                           child: TextField(
                             controller: _newLocationController,
-                            decoration: const InputDecoration(hintText: "Add new location"),
+                            decoration: const InputDecoration(hintText: "Pridėti naują vietą"),
                           ),
                         ),
                         IconButton(
@@ -97,7 +97,7 @@ class _SettingsTabState extends State<SettingsTab> {
                       ],
                     ),
                     const SizedBox(height: 24),
-                    const Text("Who", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                    const Text("Kas suleido", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                     ...whoList.map((who) => Row(
                           children: [
                             Expanded(child: Text(who)),
@@ -115,7 +115,7 @@ class _SettingsTabState extends State<SettingsTab> {
                         Expanded(
                           child: TextField(
                             controller: _newWhoController,
-                            decoration: const InputDecoration(hintText: "Add new who"),
+                            decoration: const InputDecoration(hintText: "Pridėti naują asmenį"),
                           ),
                         ),
                         IconButton(
@@ -134,7 +134,7 @@ class _SettingsTabState extends State<SettingsTab> {
                     const SizedBox(height: 32),
                     ElevatedButton(
                       onPressed: _logout,
-                      child: const Text("Log Out"),
+                      child: const Text("Atsijungti"),
                     ),
                   ],
                 ),

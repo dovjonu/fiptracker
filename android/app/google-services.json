@@ -22,6 +22,14 @@
           }
         },
         {
+          "client_id": "457484690219-ahi1jnnclfhjgi71dujtsl1vbeo3uffl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.murkosappsas",
+            "certificate_hash": "cd6cfcf5c791ed4094f9fb887f407db056774b9d"
+          }
+        },
+        {
           "client_id": "457484690219-hq24og9q1fej63adv5m19415g8m1bb7k.apps.googleusercontent.com",
           "client_type": 3
         }
