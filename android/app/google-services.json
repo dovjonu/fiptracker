@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "457484690219",
+    "project_id": "appsasmurkos",
+    "storage_bucket": "appsasmurkos.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457484690219:android:598b73e67ff1ea7284db6e",
+        "android_client_info": {
+          "package_name": "com.example.murkosappsas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "457484690219-9ppkuhn4shp7e446edforj1vafo9q0iu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.murkosappsas",
+            "certificate_hash": "54ac2b2ca6a97bef5f3e3392be6154ddbe4f0cbf"
+          }
+        },
+        {
+          "client_id": "457484690219-hq24og9q1fej63adv5m19415g8m1bb7k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_UsNrWtWszJlc_xE20nzIPInVwhb9gG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "457484690219-hq24og9q1fej63adv5m19415g8m1bb7k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

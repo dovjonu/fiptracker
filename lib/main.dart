@@ -1,0 +1,28 @@
+import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:murkosappsas/screens/overview_tab.dart';
+import 'firebase_options.dart';
+import 'screens/login_screen.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(const CatMedsApp());
+}
+
+class CatMedsApp extends StatelessWidget {
+  const CatMedsApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Cat Medicine Tracker',
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.system, // Follows system setting
+      home: const LoginScreen(),
+    );
+  }
+}
